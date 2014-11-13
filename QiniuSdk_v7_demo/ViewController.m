@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 #import "QNUploadManager.h"
+#import "UIImage+ResizeMagick.h"
 
 @interface ViewController ()
 
@@ -20,33 +21,44 @@
 {
     [super viewDidLoad];
     
-    // Your Token Here, See: http://developer.qiniu.com/docs/v6/api/reference/security/upload-token.html
-    NSString *token = @"";
     QNUploadManager *upManager = [[QNUploadManager alloc] init];
     
-    // ------------------- Test putData -------------------------
-    //    NSData *data = [@"Hello, World!" dataUsingEncoding : NSUTF8StringEncoding];
-    //    [upManager putData:data key:@"hello" token:token
-    //                   complete: ^(QNResponseInfo *info, NSString *key, NSDictionary *resp) {
-    //                       NSLog(@"%@", info);
-    //                       NSLog(@"%@", resp);
-    //                   } option:nil];
-
-    // ------------------- Test putFile -------------------------
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"the_v" ofType:@"png"];
+    // Your Token Here, See: http://developer.qiniu.com/docs/v6/api/reference/security/upload-token.html
+    NSString *token = @"";
     
-    NSString *fileName = [NSString stringWithFormat:@"%@_%@.png", [self getDateTimeString], [self randomStringWithLength:8]];
-
-    [upManager putFile:path
+    // Load Local Image
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"pixar" ofType:@"jpeg"];
+    UIImage *image = [[UIImage alloc] initWithContentsOfFile:filePath];
+    
+    NSString *fileName = [NSString stringWithFormat:@"%@_%@.jpg", [self getDateTimeString], [self randomStringWithLength:8]];
+    
+    // ------------------- Test putData -------------------------
+//    NSData *data = [@"Hello, World!" dataUsingEncoding : NSUTF8StringEncoding];
+    NSData *data = [image resizedAndReturnData];
+    [upManager putData:data
                    key:fileName
                  token:token
-              complete:^(QNResponseInfo *info, NSString *key, NSDictionary *resp) {
-        
-        NSLog(@" --->> Info: %@  ", info);
-        NSLog(@" ---------------------");
-        NSLog(@" --->> Response: %@,  ", resp);
-        
-    } option:nil];
+              complete: ^(QNResponseInfo *info, NSString *key, NSDictionary *resp) {
+                       
+                       NSLog(@" --->> Info: %@  ", info);
+                       NSLog(@" ---------------------");
+                       NSLog(@" --->> Response: %@,  ", resp);
+                }
+                option:nil];
+
+    // ------------------- Test putFile -------------------------
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"the_v" ofType:@"png"];
+//
+//    [upManager putFile:path
+//                   key:fileName
+//                 token:token
+//              complete:^(QNResponseInfo *info, NSString *key, NSDictionary *resp) {
+//        
+//        NSLog(@" --->> Info: %@  ", info);
+//        NSLog(@" ---------------------");
+//        NSLog(@" --->> Response: %@,  ", resp);
+//        
+//    } option:nil];
     
     
 }

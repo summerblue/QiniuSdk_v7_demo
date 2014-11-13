@@ -17,6 +17,11 @@
 		F36B8CC21A135E16004EA04A /* QiniuSdk_v7_demoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F36B8CC11A135E16004EA04A /* QiniuSdk_v7_demoTests.m */; };
 		F36B8CCC1A135F6B004EA04A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F36B8CCB1A135F6B004EA04A /* libz.dylib */; };
 		F36B8CCF1A136025004EA04A /* the_v.png in Resources */ = {isa = PBXBuildFile; fileRef = F36B8CCE1A136025004EA04A /* the_v.png */; };
+		F3E0CD981A142F9D00353DF4 /* sight_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3E0CD951A142F9D00353DF4 /* sight_1.jpg */; };
+		F3E0CD991A142F9D00353DF4 /* sight_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3E0CD961A142F9D00353DF4 /* sight_2.jpg */; };
+		F3E0CD9A1A142F9D00353DF4 /* vimo.png in Resources */ = {isa = PBXBuildFile; fileRef = F3E0CD971A142F9D00353DF4 /* vimo.png */; };
+		F3E0CD9D1A142FD900353DF4 /* UIImage+ResizeMagick.m in Sources */ = {isa = PBXBuildFile; fileRef = F3E0CD9C1A142FD900353DF4 /* UIImage+ResizeMagick.m */; };
+		F3E0CD9F1A14364B00353DF4 /* pixar.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = F3E0CD9E1A14364B00353DF4 /* pixar.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +53,12 @@
 		F36B8CC11A135E16004EA04A /* QiniuSdk_v7_demoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QiniuSdk_v7_demoTests.m; sourceTree = "<group>"; };
 		F36B8CCB1A135F6B004EA04A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		F36B8CCE1A136025004EA04A /* the_v.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = the_v.png; sourceTree = "<group>"; };
+		F3E0CD951A142F9D00353DF4 /* sight_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sight_1.jpg; sourceTree = "<group>"; };
+		F3E0CD961A142F9D00353DF4 /* sight_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sight_2.jpg; sourceTree = "<group>"; };
+		F3E0CD971A142F9D00353DF4 /* vimo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vimo.png; sourceTree = "<group>"; };
+		F3E0CD9B1A142FD900353DF4 /* UIImage+ResizeMagick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ResizeMagick.h"; sourceTree = "<group>"; };
+		F3E0CD9C1A142FD900353DF4 /* UIImage+ResizeMagick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ResizeMagick.m"; sourceTree = "<group>"; };
+		F3E0CD9E1A14364B00353DF4 /* pixar.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pixar.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +122,8 @@
 		F36B8CA41A135E15004EA04A /* QiniuSdk_v7_demo */ = {
 			isa = PBXGroup;
 			children = (
+				F3E0CD9B1A142FD900353DF4 /* UIImage+ResizeMagick.h */,
+				F3E0CD9C1A142FD900353DF4 /* UIImage+ResizeMagick.m */,
 				F36B8CCD1A136025004EA04A /* Example */,
 				F36B8CA91A135E15004EA04A /* AppDelegate.h */,
 				F36B8CAA1A135E15004EA04A /* AppDelegate.m */,
@@ -153,6 +166,10 @@
 		F36B8CCD1A136025004EA04A /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				F3E0CD9E1A14364B00353DF4 /* pixar.jpeg */,
+				F3E0CD951A142F9D00353DF4 /* sight_1.jpg */,
+				F3E0CD961A142F9D00353DF4 /* sight_2.jpg */,
+				F3E0CD971A142F9D00353DF4 /* vimo.png */,
 				F36B8CCE1A136025004EA04A /* the_v.png */,
 			);
 			path = Example;
@@ -242,8 +259,12 @@
 			files = (
 				F36B8CB11A135E15004EA04A /* Main.storyboard in Resources */,
 				F36B8CB61A135E15004EA04A /* LaunchScreen.xib in Resources */,
+				F3E0CD9F1A14364B00353DF4 /* pixar.jpeg in Resources */,
+				F3E0CD9A1A142F9D00353DF4 /* vimo.png in Resources */,
 				F36B8CCF1A136025004EA04A /* the_v.png in Resources */,
 				F36B8CB31A135E15004EA04A /* Images.xcassets in Resources */,
+				F3E0CD991A142F9D00353DF4 /* sight_2.jpg in Resources */,
+				F3E0CD981A142F9D00353DF4 /* sight_1.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +318,7 @@
 				F36B8CAE1A135E15004EA04A /* ViewController.m in Sources */,
 				F36B8CAB1A135E15004EA04A /* AppDelegate.m in Sources */,
 				F36B8CA81A135E15004EA04A /* main.m in Sources */,
+				F3E0CD9D1A142FD900353DF4 /* UIImage+ResizeMagick.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
